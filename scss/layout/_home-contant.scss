@@ -106,7 +106,7 @@ section{
       .title-description{
         position: absolute;
         top: 220px;
-        left: 250px;
+        left: 270px;
         width: 325px;
 
 
@@ -269,46 +269,43 @@ section{
 }
 
 
-@media (max-width: 850px){
+@media screen and (max-width: 850px){
   
 }
 
-@media(max-width: 600px){
-  
+@media screen and (max-width: 500px){
+
   .about {
     
     .container{
       grid-template-columns: repeat(1, 1fr);
+      justify-content: center;
+      align-content: center;
       .content{
         color: #fff;
         transform: translateY(-50px);
 
         .title{
+          width: 200px;
           font-size: 150px;
           color: rgba(89, 89, 89, 0.5);
-          transform: translate(200px, 0) rotate(0deg);
+          transform: translateX(100px) rotate(0deg);
         }
 
         .title-description{
           top: 100px;
-          left: 130px;
-
-          font-style: italic;
-          font-weight: bold;
+          left: 25px;
+          
           line-height: 31px;
           font-size: 16px;
           text-align: center;
         }
 
         .text{
-          width: 400px;
-          margin-left: 100px;
+          width: 300px;
+          margin-left: 25px;
           text-align: center;
-
-          font-style: italic;
-          font-weight: bold;
-          font-size: 8px;
-          line-height: 12px;
+          font-size: 12px;
         }
 
       }
@@ -320,46 +317,45 @@ section{
         transform: translateY(0);
 
           img{
-            width: 50%;
+            width: 100%;
           }
       }
     }
   }
 
   .skills{
+
     .container{
       grid-template-columns: repeat(1, 1fr);
+      justify-content: center;
+      align-content: center;
       .content{
         color: #fff;
         transform: translateY(-50px);
 
         .title{
+          width: 200px;
           font-size: 150px;
           color: rgba(89, 89, 89, 0.5);
-          transform: translate(200px, 0) rotate(0deg);
+          transform: translateX(75px) rotate(0deg);
         }
 
         .title-description{
           top: 100px;
-          left: 130px;
-
-          font-style: italic;
-          font-weight: bold;
+          left: 10px;
+          
           line-height: 31px;
           font-size: 16px;
           text-align: center;
         }
 
         .text{
-          width: 400px;
-          margin-left: 100px;
+          width: 300px;
+          margin-left: 25px;
           text-align: center;
-
-          font-style: italic;
-          font-weight: bold;
-          font-size: 8px;
-          line-height: 12px;
+          font-size: 12px;
         }
+
       }
     }
 
@@ -370,7 +366,7 @@ section{
         .fronte{
           width: 252px;
           height: 72px;
-          transform: translateY(-80px) rotate(0deg);
+          transform: translate(-50px,15px) rotate(0deg);
 
           .img-front{
             display: flex;
@@ -381,9 +377,9 @@ section{
 
         .back{
           
-          width: 252px;
+          width: 200px;
           height: 72px;
-          transform: translate(250px,-190px) rotate(0deg);
+          transform: translate(125px, -97px) rotate(0deg);
 
           .img-back{
             gap: 10px;
@@ -398,37 +394,35 @@ section{
     
     .container{
       grid-template-columns: repeat(1, 1fr);
+      justify-content: center;
+      align-content: center;
       .content{
         color: #fff;
         transform: translateY(-50px);
 
         .title{
+          width: 200px;
           font-size: 150px;
           color: rgba(89, 89, 89, 0.5);
-          transform: translate(200px, 0) rotate(0deg);
+          transform: translateX(75px) rotate(0deg);
         }
 
         .title-description{
           top: 100px;
-          left: 130px;
-
-          font-style: italic;
-          font-weight: bold;
+          left: 10px;
+          
           line-height: 31px;
-          font-size: 16px;
+          font-size: 24px;
           text-align: center;
         }
 
         .text{
-          width: 400px;
-          margin-left: 100px;
+          width: 300px;
+          margin-left: 25px;
           text-align: center;
-
-          font-style: italic;
-          font-weight: bold;
-          font-size: 8px;
-          line-height: 12px;
+          font-size: 12px;
         }
+
       }
     }
 
@@ -436,11 +430,11 @@ section{
       .text{
         font-size: 24px;
         .ui{
-          transform: translate(120px,-100px) rotate(0deg);
+          transform: translate(-10px,-15px) rotate(0deg);
 
           .img-Ui{
-            flex-wrap: wrap;
-            transform: translate(0px, 50px) rotate(0deg);
+            gap: 50px;
+            transform: translate(150px, 100px) rotate(0deg);
           }
         }
       }

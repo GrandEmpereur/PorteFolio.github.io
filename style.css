@@ -86,7 +86,7 @@ section {
 .skills .container .content .title-description {
   position: absolute;
   top: 220px;
-  left: 250px;
+  left: 270px;
   width: 325px;
   font-style: italic;
   font-weight: bold;
@@ -207,36 +207,34 @@ section {
   transform: translate(120px, 150px) rotate(90deg);
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .about .container {
     grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-content: center;
   }
   .about .container .content {
     color: #fff;
     transform: translateY(-50px);
   }
   .about .container .content .title {
+    width: 200px;
     font-size: 150px;
     color: rgba(89, 89, 89, 0.5);
-    transform: translate(200px, 0) rotate(0deg);
+    transform: translateX(100px) rotate(0deg);
   }
   .about .container .content .title-description {
     top: 100px;
-    left: 130px;
-    font-style: italic;
-    font-weight: bold;
+    left: 25px;
     line-height: 31px;
     font-size: 16px;
     text-align: center;
   }
   .about .container .content .text {
-    width: 400px;
-    margin-left: 100px;
+    width: 300px;
+    margin-left: 25px;
     text-align: center;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 8px;
-    line-height: 12px;
+    font-size: 12px;
   }
   .about .container .imgContainer {
     display: flex;
@@ -245,38 +243,36 @@ section {
     transform: translateY(0);
   }
   .about .container .imgContainer img {
-    width: 50%;
+    width: 100%;
   }
 
   .skills .container {
     grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-content: center;
   }
   .skills .container .content {
     color: #fff;
     transform: translateY(-50px);
   }
   .skills .container .content .title {
+    width: 200px;
     font-size: 150px;
     color: rgba(89, 89, 89, 0.5);
-    transform: translate(200px, 0) rotate(0deg);
+    transform: translateX(75px) rotate(0deg);
   }
   .skills .container .content .title-description {
     top: 100px;
-    left: 130px;
-    font-style: italic;
-    font-weight: bold;
+    left: 10px;
     line-height: 31px;
     font-size: 16px;
     text-align: center;
   }
   .skills .container .content .text {
-    width: 400px;
-    margin-left: 100px;
+    width: 300px;
+    margin-left: 25px;
     text-align: center;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 8px;
-    line-height: 12px;
+    font-size: 12px;
   }
   .skills .skill-content .text {
     font-size: 24px;
@@ -284,7 +280,7 @@ section {
   .skills .skill-content .text .fronte {
     width: 252px;
     height: 72px;
-    transform: translateY(-80px) rotate(0deg);
+    transform: translate(-50px, 15px) rotate(0deg);
   }
   .skills .skill-content .text .fronte .img-front {
     display: flex;
@@ -292,9 +288,9 @@ section {
     transform: translate(70px, 100px) rotate(0deg);
   }
   .skills .skill-content .text .back {
-    width: 252px;
+    width: 200px;
     height: 72px;
-    transform: translate(250px, -190px) rotate(0deg);
+    transform: translate(125px, -97px) rotate(0deg);
   }
   .skills .skill-content .text .back .img-back {
     gap: 10px;
@@ -303,43 +299,41 @@ section {
 
   .Ui .container {
     grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-content: center;
   }
   .Ui .container .content {
     color: #fff;
     transform: translateY(-50px);
   }
   .Ui .container .content .title {
+    width: 200px;
     font-size: 150px;
     color: rgba(89, 89, 89, 0.5);
-    transform: translate(200px, 0) rotate(0deg);
+    transform: translateX(75px) rotate(0deg);
   }
   .Ui .container .content .title-description {
     top: 100px;
-    left: 130px;
-    font-style: italic;
-    font-weight: bold;
+    left: 10px;
     line-height: 31px;
-    font-size: 16px;
+    font-size: 24px;
     text-align: center;
   }
   .Ui .container .content .text {
-    width: 400px;
-    margin-left: 100px;
+    width: 300px;
+    margin-left: 25px;
     text-align: center;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 8px;
-    line-height: 12px;
+    font-size: 12px;
   }
   .Ui .ui-content .text {
     font-size: 24px;
   }
   .Ui .ui-content .text .ui {
-    transform: translate(120px, -100px) rotate(0deg);
+    transform: translate(-10px, -15px) rotate(0deg);
   }
   .Ui .ui-content .text .ui .img-Ui {
-    flex-wrap: wrap;
-    transform: translate(0px, 50px) rotate(0deg);
+    gap: 50px;
+    transform: translate(150px, 100px) rotate(0deg);
   }
 }
 body {
@@ -508,7 +502,7 @@ header .social-icon > div a i {
   font-size: 32px;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 500px) {
   header {
     width: 100vw;
     height: 100vh;
@@ -534,22 +528,29 @@ header .social-icon > div a i {
     font-size: 14px;
   }
   header nav .container .menuOpen {
-    top: 3.5vh;
+    top: 0;
+    bottom: calc(100% - 100vh);
+    width: unset;
+    transition: 0.5s all;
+    background-color: #000;
+    z-index: 100;
   }
   header nav .container .menuOpen .navLinks {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 5vh;
-    gap: 10vw;
-    transition: all 2s;
+    height: 70vh;
+    gap: 10vh;
   }
   header nav .container .menuOpen .navLinks .btn {
     display: block;
   }
   header .big-title {
     font-size: 3rem;
+    position: relative;
+    z-index: 25;
   }
   header .clouds {
     width: 100vw;
@@ -557,17 +558,19 @@ header .social-icon > div a i {
     opacity: 0.8;
   }
   header .forg {
-    width: 90vw;
+    width: 1000px;
     height: 100vh;
+    left: -280px;
   }
   header .bg {
     width: 100vw;
     height: 120vh;
+    object-fit: cover;
   }
   header .social-icon {
-    bottom: 50px;
-    right: 50px;
-    z-index: 50;
+    bottom: 70px;
+    right: 100px;
+    z-index: 26;
   }
   header .social-icon > div a i {
     font-size: 24px;
