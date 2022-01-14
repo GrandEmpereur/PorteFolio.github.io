@@ -513,7 +513,7 @@ header .social-icon > div a i {
   }
   header nav {
     width: 100vw;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
   }
   header nav .container {
     display: flex;
@@ -568,8 +568,8 @@ header .social-icon > div a i {
     object-fit: cover;
   }
   header .social-icon {
-    bottom: 70px;
-    right: 100px;
+    bottom: 50px;
+    right: 125px;
     z-index: 26;
   }
   header .social-icon > div a i {
