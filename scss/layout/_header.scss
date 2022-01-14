@@ -201,29 +201,103 @@ header{
     }
 }
 
-section{
-    width: 100%;
-    background-color: #151515;
-    position: relative;
+
+@media (max-width: 850px){
+    
+    
 }
 
+@media(max-width: 600px){
 
-// @media (max-width: 850px){
-//     section .container{
-//         grid-template-columns: 1fr;
-//     }
-// }
+    header{
+        width: 100vw;
+        height: 100vh;
+    
+        &:after{
+            width: 100vw;
+            height: 100vh;
+        }
+    
+        nav{
+            width: 100vw;
+            padding: 1rem 0;
 
-// @media(max-width: 600px){
-//     .big-title{
-//         font-size: 3rem
-//     }
+            .container{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+    
+                max-width: 40rem;
+    
+                .logo{
+                    a{
+                        font-size: 2rem;
+                    }
+                }
+                
+                .hamburger-menuOpen{
+                    .navLinks{
+                        .btn{
+                            >a{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+    
+                .menuOpen{
+                    top: 3.5vh;
+    
+                    .navLinks{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100vw;
+                        height: 5vh;
+                        gap: 10vw;
+                        transition: all 2s;
+    
+                        .btn{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
 
-//     .text{
-//         font-size: .8rem;
-//     }
+        .big-title{
+            font-size: 3rem;
+        }
 
-//     .title{
-//         font-size: 1.2rem;
-//     }
-// }
+        .clouds{
+            width: 100vw;
+            height: 100vh;
+            opacity: 0.8;
+        }
+        
+        .forg{
+            width: 90vw;
+            height: 100vh;
+        }
+        
+        .bg{
+            width: 100vw;
+            height: 120vh;
+        }
+    
+    
+        .social-icon{
+            bottom: 50px;
+            right: 50px;
+            z-index: 50;
+            
+            >div{
+                a{
+                    i{
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

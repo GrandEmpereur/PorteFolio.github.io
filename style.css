@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+section {
+  width: 100%;
+  background-color: #151515;
+}
+
 .about .shadow {
   position: absolute;
   bottom: 100%;
@@ -202,6 +207,141 @@
   transform: translate(120px, 150px) rotate(90deg);
 }
 
+@media (max-width: 600px) {
+  .about .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about .container .content {
+    color: #fff;
+    transform: translateY(-50px);
+  }
+  .about .container .content .title {
+    font-size: 150px;
+    color: rgba(89, 89, 89, 0.5);
+    transform: translate(200px, 0) rotate(0deg);
+  }
+  .about .container .content .title-description {
+    top: 100px;
+    left: 130px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 31px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .about .container .content .text {
+    width: 400px;
+    margin-left: 100px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 12px;
+  }
+  .about .container .imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(0);
+  }
+  .about .container .imgContainer img {
+    width: 50%;
+  }
+
+  .skills .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .skills .container .content {
+    color: #fff;
+    transform: translateY(-50px);
+  }
+  .skills .container .content .title {
+    font-size: 150px;
+    color: rgba(89, 89, 89, 0.5);
+    transform: translate(200px, 0) rotate(0deg);
+  }
+  .skills .container .content .title-description {
+    top: 100px;
+    left: 130px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 31px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .skills .container .content .text {
+    width: 400px;
+    margin-left: 100px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 12px;
+  }
+  .skills .skill-content .text {
+    font-size: 24px;
+  }
+  .skills .skill-content .text .fronte {
+    width: 252px;
+    height: 72px;
+    transform: translateY(-80px) rotate(0deg);
+  }
+  .skills .skill-content .text .fronte .img-front {
+    display: flex;
+    gap: 10px;
+    transform: translate(70px, 100px) rotate(0deg);
+  }
+  .skills .skill-content .text .back {
+    width: 252px;
+    height: 72px;
+    transform: translate(250px, -190px) rotate(0deg);
+  }
+  .skills .skill-content .text .back .img-back {
+    gap: 10px;
+    transform: translate(70px, 100px) rotate(0deg);
+  }
+
+  .Ui .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .Ui .container .content {
+    color: #fff;
+    transform: translateY(-50px);
+  }
+  .Ui .container .content .title {
+    font-size: 150px;
+    color: rgba(89, 89, 89, 0.5);
+    transform: translate(200px, 0) rotate(0deg);
+  }
+  .Ui .container .content .title-description {
+    top: 100px;
+    left: 130px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 31px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .Ui .container .content .text {
+    width: 400px;
+    margin-left: 100px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 12px;
+  }
+  .Ui .ui-content .text {
+    font-size: 24px;
+  }
+  .Ui .ui-content .text .ui {
+    transform: translate(120px, -100px) rotate(0deg);
+  }
+  .Ui .ui-content .text .ui .img-Ui {
+    flex-wrap: wrap;
+    transform: translate(0px, 50px) rotate(0deg);
+  }
+}
 body {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
@@ -368,12 +508,71 @@ header .social-icon > div a i {
   font-size: 32px;
 }
 
-section {
-  width: 100%;
-  background-color: #151515;
-  position: relative;
+@media (max-width: 600px) {
+  header {
+    width: 100vw;
+    height: 100vh;
+  }
+  header:after {
+    width: 100vw;
+    height: 100vh;
+  }
+  header nav {
+    width: 100vw;
+    padding: 1rem 0;
+  }
+  header nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 40rem;
+  }
+  header nav .container .logo a {
+    font-size: 2rem;
+  }
+  header nav .container .hamburger-menuOpen .navLinks .btn > a {
+    font-size: 14px;
+  }
+  header nav .container .menuOpen {
+    top: 3.5vh;
+  }
+  header nav .container .menuOpen .navLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 5vh;
+    gap: 10vw;
+    transition: all 2s;
+  }
+  header nav .container .menuOpen .navLinks .btn {
+    display: block;
+  }
+  header .big-title {
+    font-size: 3rem;
+  }
+  header .clouds {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.8;
+  }
+  header .forg {
+    width: 90vw;
+    height: 100vh;
+  }
+  header .bg {
+    width: 100vw;
+    height: 120vh;
+  }
+  header .social-icon {
+    bottom: 50px;
+    right: 50px;
+    z-index: 50;
+  }
+  header .social-icon > div a i {
+    font-size: 24px;
+  }
 }
-
 * {
   margin: 0;
   padding: 0;
