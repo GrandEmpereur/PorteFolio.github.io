@@ -360,6 +360,77 @@ main {
   text-decoration: none;
 }
 
+@media screen and (max-width: 500px) {
+  header {
+    width: 100vw;
+    height: 100vh;
+  }
+  header:after {
+    width: 100vw;
+    height: 100vh;
+  }
+  header nav {
+    width: 100vw;
+    padding: 0.5rem 0;
+  }
+  header nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 40rem;
+  }
+  header nav .container .logo a {
+    font-size: 2rem;
+  }
+  header nav .container .hamburger-menuOpen .navLinks .btn > a {
+    font-size: 14px;
+  }
+  header nav .container .menuOpen {
+    top: 0;
+    bottom: calc(100% - 100vh);
+    width: unset;
+    transition: 0.5s all;
+    background-color: #000;
+    z-index: 100;
+  }
+  header nav .container .menuOpen .navLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 70vh;
+    gap: 10vh;
+  }
+  header nav .container .menuOpen .navLinks .btn {
+    display: block;
+  }
+
+  .contact-content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-content .content {
+    width: 100%;
+    display: flex;
+    gap: 5vh;
+    flex-wrap: wrap;
+  }
+  .contact-content .content .img img {
+    height: 400px;
+    border-radius: 10px;
+  }
+  .contact-content .content .text {
+    color: #fff;
+  }
+  .contact-content .content .text a {
+    color: #fd0000;
+    text-decoration: none;
+  }
+}
 body {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
@@ -379,6 +450,11 @@ body {
   padding: 2rem 0;
   z-index: 30;
   background: linear-gradient(to bottom, rgba(43, 43, 43, 0.5), transparent);
+}
+@media screen and (max-width: 500px) {
+  .header nav {
+    padding: 0.5rem 0;
+  }
 }
 .header nav .container {
   display: flex;
@@ -460,6 +536,11 @@ body {
 .header nav .container .menuOpen {
   top: 5vh;
 }
+@media screen and (max-width: 500px) {
+  .header nav .container .menuOpen {
+    top: 0vh;
+  }
+}
 .header nav .container .menuOpen .navLinks {
   display: flex;
   align-items: center;
@@ -468,6 +549,11 @@ body {
   height: 5vh;
   gap: 10vw;
   transition: all 2s;
+}
+@media screen and (max-width: 500px) {
+  .header nav .container .menuOpen .navLinks {
+    height: 60vh;
+  }
 }
 .header nav .container .menuOpen .navLinks .btn {
   display: block;
@@ -483,10 +569,27 @@ body {
   font-weight: 600;
   color: #fff;
 }
+@media screen and (max-width: 500px) {
+  .header .big-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    position: relative;
+    z-index: 25;
+  }
+}
 .header .clouds {
   position: absolute;
   z-index: 11;
   opacity: 0.5;
+}
+@media screen and (max-width: 500px) {
+  .header .clouds {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.8;
+  }
 }
 .header .forg {
   width: 100%;
@@ -495,12 +598,26 @@ body {
   bottom: -150px;
   z-index: 10;
 }
+@media screen and (max-width: 500px) {
+  .header .forg {
+    width: 1000px;
+    height: 100vh;
+    left: -280px;
+  }
+}
 .header .bg {
   position: absolute;
   width: 100%;
   bottom: -100px;
   left: 0;
   z-index: 9;
+}
+@media screen and (max-width: 500px) {
+  .header .bg {
+    width: 100vw;
+    height: 120vh;
+    object-fit: cover;
+  }
 }
 .header .social-icon {
   position: absolute;
@@ -515,84 +632,17 @@ body {
   color: #fff;
   font-size: 32px;
 }
-
 @media screen and (max-width: 500px) {
-  header {
-    width: 100vw;
-    height: 100vh;
-  }
-  header:after {
-    width: 100vw;
-    height: 100vh;
-  }
-  header nav {
-    width: 100vw;
-    padding: 0.5rem 0;
-  }
-  header nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 40rem;
-  }
-  header nav .container .logo a {
-    font-size: 2rem;
-  }
-  header nav .container .hamburger-menuOpen .navLinks .btn > a {
-    font-size: 14px;
-  }
-  header nav .container .menuOpen {
-    top: 0;
-    bottom: calc(100% - 100vh);
-    width: unset;
-    transition: 0.5s all;
-    background-color: #000;
-    z-index: 100;
-  }
-  header nav .container .menuOpen .navLinks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 70vh;
-    gap: 10vh;
-  }
-  header nav .container .menuOpen .navLinks .btn {
-    display: block;
-  }
-  header .big-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    position: relative;
-    z-index: 25;
-  }
-  header .clouds {
-    width: 100vw;
-    height: 100vh;
-    opacity: 0.8;
-  }
-  header .forg {
-    width: 1000px;
-    height: 100vh;
-    left: -280px;
-  }
-  header .bg {
-    width: 100vw;
-    height: 120vh;
-    object-fit: cover;
-  }
-  header .social-icon {
+  .header .social-icon {
     bottom: 150px;
     right: 100px;
     z-index: 26;
   }
-  header .social-icon > div a i {
+  .header .social-icon > div a i {
     font-size: 32px;
   }
 }
+
 * {
   margin: 0;
   padding: 0;
