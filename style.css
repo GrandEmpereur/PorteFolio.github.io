@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-section {
-  width: 100%;
-  background-color: #151515;
+main {
+  background: #222125;
 }
 
 .about .shadow {
@@ -336,28 +335,43 @@ section {
     transform: translate(150px, 100px) rotate(0deg);
   }
 }
+.contact-content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-content .content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.contact-content .content .img img {
+  height: 500px;
+  border-radius: 10px;
+}
+.contact-content .content .text {
+  color: #fff;
+}
+.contact-content .content .text a {
+  color: #fd0000;
+  text-decoration: none;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
 
-header {
+.header {
   width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
 }
-header:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.05);
-  z-index: 25;
-}
-header nav {
+.header nav {
   position: absolute;
   top: 0;
   left: 0;
@@ -366,7 +380,7 @@ header nav {
   z-index: 30;
   background: linear-gradient(to bottom, rgba(43, 43, 43, 0.5), transparent);
 }
-header nav .container {
+.header nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -374,14 +388,14 @@ header nav .container {
   padding: 0 2rem;
   margin: 0 auto;
 }
-header nav .container .logo a {
+.header nav .container .logo a {
   color: #fff;
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
 }
-header nav .container .hamburger-menu {
+.header nav .container .hamburger-menu {
   width: 5rem;
   height: 1.5rem;
   cursor: pointer;
@@ -391,18 +405,18 @@ header nav .container .hamburger-menu {
   position: relative;
   z-index: 999;
 }
-header nav .container .hamburger-menu:hover .bar {
+.header nav .container .hamburger-menu:hover .bar {
   width: 1rem;
   transition: all 0.5s;
 }
-header nav .container .hamburger-menu .bar {
+.header nav .container .hamburger-menu .bar {
   position: relative;
   width: 1.55rem;
   height: 3px;
   background-color: #fff;
   border-radius: 2px;
 }
-header nav .container .hamburger-menu .bar:before, header nav .container .hamburger-menu .bar:after {
+.header nav .container .hamburger-menu .bar:before, .header nav .container .hamburger-menu .bar:after {
   content: "";
   position: absolute;
   width: 1.55rem;
@@ -411,42 +425,42 @@ header nav .container .hamburger-menu .bar:before, header nav .container .hambur
   background-color: #fff;
   border-radius: 2px;
 }
-header nav .container .hamburger-menu .bar:before {
+.header nav .container .hamburger-menu .bar:before {
   transform: translateY(-8px);
 }
-header nav .container .hamburger-menu .bar:after {
+.header nav .container .hamburger-menu .bar:after {
   transform: translateY(8px);
 }
-header nav .container .hamburger-menuOpen {
+.header nav .container .hamburger-menuOpen {
   z-index: 500;
   position: absolute;
   left: 0;
   width: 100vw;
 }
-header nav .container .hamburger-menuOpen .navLinks {
+.header nav .container .hamburger-menuOpen .navLinks {
   width: 100vw;
   gap: 15vh;
   transition: all 2s;
 }
-header nav .container .hamburger-menuOpen .navLinks .btn {
+.header nav .container .hamburger-menuOpen .navLinks .btn {
   display: none;
 }
-header nav .container .hamburger-menuOpen .navLinks .btn > a {
+.header nav .container .hamburger-menuOpen .navLinks .btn > a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
 }
-header nav .container .hamburger-menuOpen .navLinks .btn > a:hover {
+.header nav .container .hamburger-menuOpen .navLinks .btn > a:hover {
   color: rgba(0, 0, 0, 0.644);
   border-bottom: 2px solid #000;
   padding-bottom: 5px;
   transition: all 0.5s;
 }
-header nav .container .menuOpen {
+.header nav .container .menuOpen {
   top: 5vh;
 }
-header nav .container .menuOpen .navLinks {
+.header nav .container .menuOpen .navLinks {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -455,10 +469,10 @@ header nav .container .menuOpen .navLinks {
   gap: 10vw;
   transition: all 2s;
 }
-header nav .container .menuOpen .navLinks .btn {
+.header nav .container .menuOpen .navLinks .btn {
   display: block;
 }
-header .big-title {
+.header .big-title {
   position: absolute;
   z-index: 30;
   line-height: 4rem;
@@ -469,26 +483,26 @@ header .big-title {
   font-weight: 600;
   color: #fff;
 }
-header .clouds {
+.header .clouds {
   position: absolute;
   z-index: 11;
   opacity: 0.5;
 }
-header .forg {
+.header .forg {
   width: 100%;
   position: absolute;
   left: 50px;
   bottom: -150px;
   z-index: 10;
 }
-header .bg {
+.header .bg {
   position: absolute;
   width: 100%;
   bottom: -100px;
   left: 0;
   z-index: 9;
 }
-header .social-icon {
+.header .social-icon {
   position: absolute;
   bottom: 100px;
   right: 100px;
@@ -496,7 +510,7 @@ header .social-icon {
   gap: 25px;
   z-index: 50;
 }
-header .social-icon > div a i {
+.header .social-icon > div a i {
   position: relative;
   color: #fff;
   font-size: 32px;

@@ -1,0 +1,30 @@
+.contact-content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .img{
+            img{
+                height: 500px;
+                border-radius: 10px;
+            }
+        }
+
+        .text{
+            color: #fff;
+            
+            a{
+                color: rgb(253, 0, 0);
+                text-decoration: none;
+            }
+        }
+    }
+}

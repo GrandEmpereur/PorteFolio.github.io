@@ -1,3 +1,5 @@
+
+/* Nav bar */
 /* Helper classes */
 html,
 body {
@@ -25,12 +27,6 @@ body {
 	margin: 0 auto;
 	padding: 0 0 7em;
 	text-align: center;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	-webkit-touch-callout: none;
-	-khtml-user-select: none;
 }
 
 .slide {
@@ -125,22 +121,14 @@ body {
 }
 
 .flex-center {
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 }
 
 .zoomer__image {
 	display: block;
 	margin: 0;
-	-webkit-flex: none;
-	-ms-flex: none;
 	flex: none;
 }
 
@@ -149,7 +137,6 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate3d(-50%,-50%,0);
 	transform: translate3d(-50%,-50%,0);
 }
 
@@ -195,12 +182,10 @@ body {
 .preview img {
 	display: block;
 	border-radius: inherit;
-	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
 .zoomer--active .preview img {
-	-webkit-transform: translate3d(100%,0,0);
 	transform: translate3d(100%,0,0);
 }
 
@@ -231,7 +216,6 @@ body {
 	width: 100%;
 	height: 100vh;
 	background: #18191b;
-	-webkit-overflow-scrolling: touch;
 }
 
 .content--open {
@@ -241,8 +225,6 @@ body {
 .content__item {
 	position: absolute;
 	top: 0;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	overflow: hidden;
 	height: 0;
@@ -252,8 +234,6 @@ body {
 	pointer-events: none;
 	opacity: 0;
 	color: #fff;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
 	align-items: center;
 }
 
