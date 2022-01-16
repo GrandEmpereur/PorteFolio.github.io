@@ -361,51 +361,6 @@ main {
 }
 
 @media screen and (max-width: 500px) {
-  header {
-    width: 100vw;
-    height: 100vh;
-  }
-  header:after {
-    width: 100vw;
-    height: 100vh;
-  }
-  header nav {
-    width: 100vw;
-    padding: 0.5rem 0;
-  }
-  header nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 40rem;
-  }
-  header nav .container .logo a {
-    font-size: 2rem;
-  }
-  header nav .container .hamburger-menuOpen .navLinks .btn > a {
-    font-size: 14px;
-  }
-  header nav .container .menuOpen {
-    top: 0;
-    bottom: calc(100% - 100vh);
-    width: unset;
-    transition: 0.5s all;
-    background-color: #000;
-    z-index: 100;
-  }
-  header nav .container .menuOpen .navLinks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 70vh;
-    gap: 10vh;
-  }
-  header nav .container .menuOpen .navLinks .btn {
-    display: block;
-  }
-
   .contact-content {
     width: 100vw;
     height: 100vh;
@@ -431,6 +386,123 @@ main {
     text-decoration: none;
   }
 }
+.bp-header nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 0;
+  z-index: 30;
+  background: linear-gradient(to bottom, rgba(43, 43, 43, 0.5), transparent);
+}
+@media screen and (max-width: 500px) {
+  .bp-header nav {
+    padding: 0.5rem 0;
+  }
+}
+.bp-header nav .nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+.bp-header nav .nav__container .logo a {
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.bp-header nav .nav__container .hamburger-menu {
+  width: 5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 999;
+}
+.bp-header nav .nav__container .hamburger-menu:hover .bar {
+  width: 1rem;
+  transition: all 0.5s;
+}
+.bp-header nav .nav__container .hamburger-menu .bar {
+  position: relative;
+  width: 1.55rem;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.bp-header nav .nav__container .hamburger-menu .bar:before, .bp-header nav .nav__container .hamburger-menu .bar:after {
+  content: "";
+  position: absolute;
+  width: 1.55rem;
+  height: 3px;
+  right: 0;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.bp-header nav .nav__container .hamburger-menu .bar:before {
+  transform: translateY(-8px);
+}
+.bp-header nav .nav__container .hamburger-menu .bar:after {
+  transform: translateY(8px);
+}
+.bp-header nav .nav__container .hamburger-menuOpen {
+  z-index: 500;
+  position: absolute;
+  left: 0;
+  width: 100vw;
+}
+.bp-header nav .nav__container .hamburger-menuOpen .navLinks {
+  width: 100vw;
+  gap: 15vh;
+  transition: all 2s;
+}
+.bp-header nav .nav__container .hamburger-menuOpen .navLinks .btn {
+  display: none;
+}
+.bp-header nav .nav__container .hamburger-menuOpen .navLinks .btn > a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+.bp-header nav .nav__container .hamburger-menuOpen .navLinks .btn > a:hover {
+  color: rgba(0, 0, 0, 0.644);
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+  transition: all 0.5s;
+}
+.bp-header nav .nav__container .menuOpen {
+  top: 5vh;
+}
+@media screen and (max-width: 500px) {
+  .bp-header nav .nav__container .menuOpen {
+    top: 0vh;
+  }
+}
+.bp-header nav .nav__container .menuOpen .navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 5vh;
+  gap: 10vw;
+  transition: all 2s;
+}
+@media screen and (max-width: 500px) {
+  .bp-header nav .nav__container .menuOpen .navLinks {
+    height: 60vh;
+  }
+}
+.bp-header nav .nav__container .menuOpen .navLinks .btn {
+  display: block;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;

@@ -32,68 +32,6 @@
 
 @media screen and (max-width: 500px){
 
-    header{
-        width: 100vw;
-        height: 100vh;
-    
-        &:after{
-            width: 100vw;
-            height: 100vh;
-        }
-    
-        nav{
-            width: 100vw;
-            padding: 0.5rem 0;
-
-            .container{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-    
-                max-width: 40rem;
-    
-                .logo{
-                    a{
-                        font-size: 2rem;
-                    }
-                }
-                
-                .hamburger-menuOpen{
-                    .navLinks{
-                        .btn{
-                            >a{
-                                font-size: 14px;
-                            }
-                        }
-                    }
-                }
-    
-                .menuOpen{
-                    top: 0;
-                    bottom: calc(100% - 100vh);
-                    width: unset;
-                    transition: 0.5s all;
-                    background-color: #000;
-                    z-index: 100;
-
-                    .navLinks{
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        width: 100vw;
-                        height: 70vh;
-                        gap: 10vh;
-    
-                        .btn{
-                            display: block;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     .contact-content{
         width: 100vw;
         height: 100vh;
